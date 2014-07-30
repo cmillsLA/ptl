@@ -26,7 +26,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': 'I5GVltk>:U2;1&&Sg4]EebukNlNn!v87OQSRRS3f)fMTwicfPTpvUCIfI(O<e?Uc'
+	'cookie secret': 'hS.Z}Tgaq^A>F--6;La:+zdtwScu$PGW.,p!Gz9FWdJ4J-8-Z[8@,[?d`SGQEOaa'
 	
 });
 
@@ -55,9 +55,9 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	//'enquiries': 'enquiries',
-	'users': 'users',
-  'pages': ['pages', 'page-categories']
+	'posts': ['posts', 'post-categories'],
+	'enquiries': 'enquiries',
+	'users': 'users'
 });
 
 // Start Keystone to connect to your database and initialise the web server
