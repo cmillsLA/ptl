@@ -55,7 +55,7 @@ exports.initLocals = function(req, res, next) {
           var pageLink = {
             name: page.slug,
             category: page.category,
-            url: '/' + page.slug.toLowerCase().replace(/\s/g, "-") + '/'
+            url: page.slug.toLowerCase().replace(/\s/g, "-") + '/'
           };
           for(j in locals.navLinks) {
             if(locals.navLinks[j].id) {
@@ -66,6 +66,8 @@ exports.initLocals = function(req, res, next) {
           }
         }
       }
+
+      console.log(locals.navLinks);
 
       // Set user.
       locals.user = req.user;

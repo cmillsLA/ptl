@@ -57,11 +57,11 @@ html
 							each link in navLinks
 								if(link.dropdown)
 									li(class=(section == link.key ? 'active dropdown' : 'dropdown'))
-										a(class=('dropdown-toggle'), href=('#{link.href}'), data-toggle=('dropdown'))= link.label
+										a(class=('dropdown-toggle'), href=(link.href), data-toggle=('dropdown'))= link.label
 										ul(class=('dropdown-menu'), role=('menu'), aria-labelledby=('dropdownMenu'))
 											each subLink in link.pages
 												li
-													a(href='#{subLink.url}')= subLink.name
+													a(href='#{link.href}#{subLink.url}')= subLink.name
 
 								else
 									li(class=(section == link.key ? 'active' : null))
