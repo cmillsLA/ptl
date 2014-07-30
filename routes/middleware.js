@@ -67,8 +67,6 @@ exports.initLocals = function(req, res, next) {
         }
       }
 
-      console.log(locals.navLinks);
-
       // Set user.
       locals.user = req.user;
 

@@ -21,7 +21,9 @@
 var _ = require('underscore'),
 	keystone = require('keystone'),
 	middleware = require('./middleware'),
-	importRoutes = keystone.importer(__dirname);
+	importRoutes = keystone.importer(__dirname),
+  PageCategory = keystone.List('PageCategory'),
+  Page = keystone.List('Page');
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
