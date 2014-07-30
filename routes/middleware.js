@@ -10,7 +10,9 @@
 
 var _ = require('underscore'),
 	querystring = require('querystring'),
-	keystone = require('keystone');
+	keystone = require('keystone'),
+  PageCategory = keystone.List('PageCategory'),
+  Page = keystone.List('Page')
 
 
 /**
@@ -24,16 +26,56 @@ var _ = require('underscore'),
 exports.initLocals = function(req, res, next) {
 	
 	var locals = res.locals;
-	
-	locals.navLinks = [
-		{ label: 'Home',		key: 'home',		href: '/' },
-		{ label: 'Blog',		key: 'blog',		href: '/blog' },
-		{ label: 'Contact',		key: 'contact',		href: '/contact' }
-	];
-	
-	locals.user = req.user;
-	
-	next();
+
+  // Dynamically generate nav links based on PageCategories.
+  keystone.list('PageCategory').model.find().exec(function(err, results) {
+
+    locals.navLinks = [
+      { label: 'Home',		key: 'home',		href: '/' }
+    ];
+
+    for(i in results) {
+      var result = results[i];
+      var resultLink = {
+        label: result.name,
+        key: result.name.toLowerCase(),
+        href: '/' + result.name.toLowerCase().replace(/\s/g, "-") + '/',
+        dropdown: result.dropdown,
+        id: result._id,
+        pages: []
+      };
+      locals.navLinks.push(resultLink);
+    }
+
+    // Build dropdown menus dynamically based on pages.
+    keystone.list('Page').model.find().exec(function(err, pages) {
+      for(i in pages) {
+        var page = pages[i];
+        if(!page.landing) {
+          var pageLink = {
+            name: page.slug,
+            category: page.category,
+            url: '/' + page.slug.toLowerCase().replace(/\s/g, "-") + '/'
+          };
+          for(j in locals.navLinks) {
+            if(locals.navLinks[j].id) {
+              if(pageLink.category.toString() == locals.navLinks[j].id.toString()) {
+                locals.navLinks[j].pages.push(pageLink);
+              }
+            }
+          }
+        }
+      }
+
+      // Set user.
+      locals.user = req.user;
+
+      // Done.
+      next();
+
+    });
+
+  });
 	
 };
 

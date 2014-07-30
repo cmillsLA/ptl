@@ -55,14 +55,23 @@ html
 					.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left
 							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+								if(link.dropdown)
+									li(class=(section == link.key ? 'active dropdown' : 'dropdown'))
+										a(class=('dropdown-toggle'), href=('#{link.href}'), data-toggle=('dropdown'))= link.label
+										ul(class=('dropdown-menu'), role=('menu'), aria-labelledby=('dropdownMenu'))
+											each subLink in link.pages
+												li
+													a(href='#{subLink.url}')= subLink.name
+
+								else
+									li(class=(section == link.key ? 'active' : null))
+										a(href=('#{link.href}'))= link.label
 						ul.nav.navbar-nav.navbar-right
 							if user
 								if user.canAccessKeystone
 									li: a(href='/keystone') Open Keystone
 								li: a(href='/keystone/signout') Sign Out
-							else
-								li: a(href='/keystone/signin') Sign In
+
 
 		//- BODY
 		#body
