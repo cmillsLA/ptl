@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block vars
+	title Part Time Landlord - #{data.category.h1}
+
+block content
+	.container
+		h1 #{data.category.h1}
+		.content.category-content !{data.category.content}
+		each page in data.pages
+			h1 
+				a(href='#{data.parent}#{page.slug}/') #{page.h1}
+			.content !{page.content.brief}

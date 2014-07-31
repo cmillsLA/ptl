@@ -21,9 +21,7 @@
 var _ = require('underscore'),
 	keystone = require('keystone'),
 	middleware = require('./middleware'),
-	importRoutes = keystone.importer(__dirname),
-  PageCategory = keystone.List('PageCategory'),
-  Page = keystone.List('Page');
+	importRoutes = keystone.importer(__dirname);
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -39,14 +37,16 @@ exports = module.exports = function(app) {
 	
 	// Views
 	app.get('/', routes.views.index);
-  app.get('/rvb-calculator/', routes.views.page);
+  /*app.get('/rvb-calculator/', routes.views.category);
   app.get('/rvb-calculator/:page/', routes.views.page);
-  app.get('/real-estate-investing/', routes.views.page);
+  app.get('/real-estate-investing/', routes.views.category);
   app.get('/real-estate-investing/:page/', routes.views.page);
-  app.get('/mortgages/', routes.views.page);
+  app.get('/mortgages/', routes.views.category);
   app.get('/mortgages/:page/', routes.views.page);
-  app.get('/getting-started/', routes.views.page);
-  app.get('/getting-started/:page/', routes.views.page);
+  app.get('/getting-started/', routes.views.category);
+  app.get('/getting-started/:page/', routes.views.page);*/
+  app.get('/:category/', routes.views.category);
+  app.get('/:category/:page/', routes.views.page);
 	//app.all('/contact//', routes.views.contact);
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:

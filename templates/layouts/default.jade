@@ -8,8 +8,10 @@ html
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		
+		block vars
+			title #{title} Part Time Landlord
 
-		title= title || 'Part Time Landlord'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.less
@@ -57,7 +59,8 @@ html
 							each link in navLinks
 								if(link.dropdown)
 									li(class=(section == link.key ? 'active dropdown' : 'dropdown'))
-										a(class=('dropdown-toggle'), href=(link.href), data-toggle=('dropdown'))= link.label
+										//a(class=('dropdown-toggle'), href=(link.href), data-toggle=('dropdown'))= link.label
+										a(href=(link.href))= link.label
 										ul(class=('dropdown-menu'), role=('menu'), aria-labelledby=('dropdownMenu'))
 											each subLink in link.pages
 												li
@@ -95,7 +98,7 @@ html
 		.container: #footer
 
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+			p Copyright &copy;2014 Part Time Landlord.
 
 
 		//- JAVASCRIPT

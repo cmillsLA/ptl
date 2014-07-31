@@ -1,5 +1,11 @@
 extends ../layouts/default
 
+block vars
+	title Part Time Landlord - #{data.category.h1} - #{data.page.h1}
+
 block content
 	.container
-		p Page Content
+		h1 #{data.page.h1}
+		if(data.page.h2)
+			h2 #{data.page.h2}
+		.content !{data.page.content.extended}
