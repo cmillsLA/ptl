@@ -11,8 +11,13 @@ var keystone = require('keystone');
 
 keystone.init({
 	
+<<<<<<< HEAD
 	'name': 'Part Time Landlord',
 	'brand': 'Part Time Landlord',
+=======
+	'name': 'Real Estate Investing',
+	'brand': 'Real Estate Investing',
+>>>>>>> 4a001b2cdb1fac9347094db8ad6b768b87c49d73
 	
 	'less': 'public',
 	'static': 'public',
@@ -26,7 +31,11 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+<<<<<<< HEAD
 	'cookie secret': 'hS.Z}Tgaq^A>F--6;La:+zdtwScu$PGW.,p!Gz9FWdJ4J-8-Z[8@,[?d`SGQEOaa'
+=======
+	'cookie secret': '=9@CAA2oO5&3N)@t.L_6|x@sr{m6_L#$2B.I%a0&F1,X&eN{SO4@bL$TzT:LzU{!'
+>>>>>>> 4a001b2cdb1fac9347094db8ad6b768b87c49d73
 	
 });
 
@@ -55,7 +64,11 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
+<<<<<<< HEAD
 	'pages': ['pages', 'page-categories'],
+=======
+	'posts': ['posts', 'post-categories'],
+>>>>>>> 4a001b2cdb1fac9347094db8ad6b768b87c49d73
 	'enquiries': 'enquiries',
 	'users': 'users'
 });

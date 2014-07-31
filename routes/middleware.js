@@ -10,9 +10,13 @@
 
 var _ = require('underscore'),
 	querystring = require('querystring'),
+<<<<<<< HEAD
 	keystone = require('keystone'),
   PageCategory = keystone.List('PageCategory'),
   Page = keystone.List('Page')
+=======
+	keystone = require('keystone');
+>>>>>>> 4a001b2cdb1fac9347094db8ad6b768b87c49d73
 
 
 /**
@@ -26,6 +30,7 @@ var _ = require('underscore'),
 exports.initLocals = function(req, res, next) {
 	
 	var locals = res.locals;
+<<<<<<< HEAD
 
   // Dynamically generate nav links based on PageCategories.
   keystone.list('PageCategory').model.find().exec(function(err, results) {
@@ -76,6 +81,18 @@ exports.initLocals = function(req, res, next) {
     });
 
   });
+=======
+	
+	locals.navLinks = [
+		//{ label: 'Home',		key: 'home',		href: '/' },
+		{ label: 'Blog',		key: 'blog',		href: '/' },
+		{ label: 'Contact',		key: 'contact',		href: '/contact' }
+	];
+	
+	locals.user = req.user;
+	
+	next();
+>>>>>>> 4a001b2cdb1fac9347094db8ad6b768b87c49d73
 	
 };
 

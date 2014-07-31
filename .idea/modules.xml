@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/ks.iml" filepath="$PROJECT_DIR$/.idea/ks.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/keystone-re.iml" filepath="$PROJECT_DIR$/.idea/keystone-re.iml" />
+>>>>>>> 4a001b2cdb1fac9347094db8ad6b768b87c49d73
     </modules>
   </component>
 </project>

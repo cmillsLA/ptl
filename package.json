@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "part-time-landlord",
+=======
+  "name": "real-estate-investing",
+>>>>>>> 4a001b2cdb1fac9347094db8ad6b768b87c49d73
   "version": "0.0.0",
   "private": true,
   "dependencies": {

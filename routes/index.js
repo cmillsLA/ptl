@@ -37,6 +37,7 @@ exports = module.exports = function(app) {
 	
 	// Views
 	app.get('/', routes.views.index);
+<<<<<<< HEAD
   /*app.get('/rvb-calculator/', routes.views.category);
   app.get('/rvb-calculator/:page/', routes.views.page);
   app.get('/real-estate-investing/', routes.views.category);
@@ -48,6 +49,11 @@ exports = module.exports = function(app) {
   app.get('/:category/', routes.views.category);
   app.get('/:category/:page/', routes.views.page);
 	//app.all('/contact//', routes.views.contact);
+=======
+	app.get('/blog/:category?', routes.views.blog);
+	app.get('/blog/post/:post', routes.views.post);
+	app.all('/contact', routes.views.contact);
+>>>>>>> 4a001b2cdb1fac9347094db8ad6b768b87c49d73
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
