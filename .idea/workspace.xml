@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f11610-0914-43b8-b766-4afd32738c5f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Post.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/PostCategory.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site/layout.less" afterPath="$PROJECT_DIR$/public/styles/site/layout.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/middleware.js" afterPath="$PROJECT_DIR$/routes/middleware.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site.min.css" afterPath="$PROJECT_DIR$/public/styles/site.min.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/views/post.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/views/post.jade" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keystone.js" afterPath="$PROJECT_DIR$/keystone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +49,7 @@
       <file leaf-file-name="Page.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="9" selection-start="303" selection-end="303" vertical-scroll-proportion="0.20504732" vertical-offset="0" max-vertical-offset="951">
+            <state line="15" column="27" selection-start="458" selection-end="458" vertical-scroll-proportion="0.23659305" vertical-offset="0" max-vertical-offset="951">
               <folding />
             </state>
           </provider>
@@ -76,11 +74,11 @@
         <option value="$PROJECT_DIR$/models/Page.js" />
         <option value="$PROJECT_DIR$/templates/layouts/default.jade" />
         <option value="$PROJECT_DIR$/models/PageCategory.js" />
-        <option value="$PROJECT_DIR$/keystone.js" />
         <option value="$PROJECT_DIR$/routes/middleware.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/public/styles/site/layout.less" />
         <option value="$PROJECT_DIR$/models/Post.js" />
+        <option value="$PROJECT_DIR$/keystone.js" />
       </list>
     </option>
   </component>
@@ -403,11 +401,6 @@
         <state line="15" column="2" selection-start="376" selection-end="445" vertical-scroll-proportion="0.35211268" vertical-offset="0" max-vertical-offset="645" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/views/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/views/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639" />
@@ -431,14 +424,6 @@
         <state line="25" column="7" selection-start="543" selection-end="543" vertical-scroll-proportion="0.29456192" vertical-offset="180" max-vertical-offset="1380" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/post.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="738" selection-end="738" vertical-scroll-proportion="0.6393443" vertical-offset="0" max-vertical-offset="610" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/page.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="12" selection-start="53" selection-end="53" vertical-scroll-proportion="0.07064364" vertical-offset="0" max-vertical-offset="637" />
@@ -453,13 +438,6 @@
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keystone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="24" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.493347" vertical-offset="103" max-vertical-offset="1080">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/site/variables.less">
@@ -504,9 +482,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/keystone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="31" selection-start="400" selection-end="400" vertical-scroll-proportion="0.07881269" vertical-offset="103" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="303" selection-end="303" vertical-scroll-proportion="0.20504732" vertical-offset="0" max-vertical-offset="951">
+        <state line="15" column="27" selection-start="458" selection-end="458" vertical-scroll-proportion="0.23659305" vertical-offset="0" max-vertical-offset="951">
           <folding />
         </state>
       </provider>
